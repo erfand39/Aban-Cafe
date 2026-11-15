@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Aban Cafe — Smart Cafe Management</title>
+  <desc id="desc">A warm espresso-toned banner with a crafted coffee cup and the Aban Cafe wordmark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17110e"/>
+      <stop offset=".52" stop-color="#302017"/>
+      <stop offset="1" stop-color="#593923"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8b28a" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#a56c42" stop-opacity=".02"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e5"/>
+      <stop offset="1" stop-color="#d9b995"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9b6742"/>
+      <stop offset="1" stop-color="#4a291b"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="12" r="1" fill="#fff" opacity=".08"/>
+      <circle cx="47" cy="29" r=".8" fill="#fff" opacity=".06"/>
+      <circle cx="68" cy="65" r="1" fill="#fff" opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="360" rx="28" fill="url(#grain)"/>
+  <circle cx="1015" cy="166" r="225" fill="url(#glow)"/>
+  <circle cx="1015" cy="166" r="158" fill="none" stroke="#d8b28a" stroke-opacity=".13"/>
+  <circle cx="1015" cy="166" r="190" fill="none" stroke="#d8b28a" stroke-opacity=".08" stroke-dasharray="2 12"/>
+  <path d="M0 285 C220 240 345 340 560 290 S930 250 1280 310 V360 H0Z" fill="#100c0a" opacity=".28"/>
+  <g transform="translate(100 78)">
+    <ellipse cx="135" cy="205" rx="125" ry="20" fill="#000" opacity=".34" filter="url(#shadow)"/>
+    <path d="M230 77h37c43 0 61 28 56 62-5 35-29 53-67 53h-26" fill="none" stroke="#d7b48e" stroke-width="17" stroke-linecap="round"/>
+    <path d="M45 65h202l-15 115c-4 31-25 51-56 51h-61c-31 0-52-20-56-51Z" fill="url(#cup)"/>
+    <ellipse cx="146" cy="66" rx="101" ry="24" fill="#f8e8d3"/>
+    <ellipse cx="146" cy="67" rx="88" ry="16" fill="url(#coffee)"/>
+    <path d="M146 54c-31 0-46 23-22 31 15 5 34-2 43-14 7 13 24 19 37 12 16-9-3-28-31-29-9 0-18 2-27 7Z" fill="#f4dfc7" opacity=".96"/>
+    <path d="M146 61c-13 7-18 17-14 25m14-25c13 7 18 17 14 25" fill="none" stroke="#f4dfc7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M96 91c6 17 12 34 17 52" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+    <path d="M123 31c-18-16 16-23 0-40m43 40c-18-16 16-23 0-40" fill="none" stroke="#e8c9a8" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M61 245h173" stroke="#d7b48e" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#c18c5c" opacity=".9">
+      <ellipse cx="25" cy="206" rx="13" ry="20" transform="rotate(-28 25 206)"/>
+      <path d="M16 192q12 13 18 28" stroke="#5b3825" stroke-width="2" fill="none"/>
+      <ellipse cx="285" cy="224" rx="12" ry="18" transform="rotate(24 285 224)"/>
+      <path d="M278 208q8 13 14 31" stroke="#5b3825" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+  <g transform="translate(490 0)">
+    <text x="0" y="150" fill="#f5e9db" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" letter-spacing="5">ABAN CAFE</text>
+    <rect x="4" y="177" width="102" height="4" rx="2" fill="#c99465"/>
+    <text x="4" y="218" fill="#d9b995" font-family="Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="5">SMART CAFE MANAGEMENT</text>
+    <text x="4" y="260" fill="#cdb8a4" font-family="Arial, sans-serif" font-size="17" letter-spacing="1.2">Recipe costing · Menu pricing · Daily ledger</text>
+    <text x="4" y="310" fill="#9f8066" font-family="Arial, sans-serif" font-size="12" letter-spacing="3">CRAFTED FOR BETTER CAFE OPERATIONS</text>
+  </g>
+  <path d="M1180 58v244" stroke="#d8b28a" stroke-opacity=".18"/>
+  <circle cx="1180" cy="58" r="4" fill="#d8b28a"/>
+  <circle cx="1180" cy="302" r="4" fill="#d8b28a"/>
+</svg>
