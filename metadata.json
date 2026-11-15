@@ -1,0 +1,6 @@
+{
+  "name": "کافه آبان",
+  "description": "سیستم مدیریت قیمت‌گذاری بر اساس دستور تهیه و دفتر حساب کافه آبان",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
