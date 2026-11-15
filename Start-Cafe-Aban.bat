@@ -34,10 +34,12 @@ if "%PY_CMD%"=="" (
 )
 
 if not exist "dist\index.html" (
-  echo [ERROR] Built UI folder "dist" was not found.
-  echo Please make sure the complete Cafe Aban folder was extracted properly.
-  pause
-  exit /b 1
+  if not exist "local_ui\index.html" (
+    echo [ERROR] Built UI folder ^("dist" or "local_ui"^) was not found.
+    echo Please make sure the complete Cafe Aban folder was extracted properly.
+    pause
+    exit /b 1
+  )
 )
 
 echo Database path: %~dp0data\cafe-aban.db

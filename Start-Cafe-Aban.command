@@ -18,8 +18,8 @@ if [ -z "$PY_CMD" ]; then
   exit 1
 fi
 
-if [ ! -f "dist/index.html" ]; then
-  echo "[خطا] پوشه ساخته‌شده برنامه (dist) یافت نشد."
+if [ ! -f "dist/index.html" ] && [ ! -f "local_ui/index.html" ]; then
+  echo "[خطا] پوشه ساخته‌شده برنامه (dist یا local_ui) یافت نشد."
   read -p "برای خروج Enter بزنید..."
   exit 1
 fi

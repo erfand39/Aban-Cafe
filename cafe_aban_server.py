@@ -38,7 +38,16 @@ from init_cafe_aban_db import (
 
 BASE_DIR = Path(__file__).resolve().parent
 DIST_DIR = BASE_DIR / "dist"
+LOCAL_UI_DIR = BASE_DIR / "local_ui"
 DB_LOCK = threading.RLock()
+
+
+def resolve_ui_dir() -> Path:
+    if (DIST_DIR / "index.html").exists():
+        return DIST_DIR
+    if (LOCAL_UI_DIR / "index.html").exists():
+        return LOCAL_UI_DIR
+    return DIST_DIR
 
 VALID_ENTRY_TYPES = {"sale", "receipt", "payment", "expense", "manual"}
 VALID_PERSON_ROLES = {"customer", "supplier", "staff", "other"}
@@ -1567,7 +1576,8 @@ def main() -> None:
     db_path = Path(args.db)
     conn = get_db_connection(db_path)
     port = pick_available_port(args.port)
-    handler = make_handler(conn, DIST_DIR)
+    ui_dir = resolve_ui_dir()
+    handler = make_handler(conn, ui_dir)
     server = ThreadingHTTPServer(("127.0.0.1", port), handler)
     url = f"http://127.0.0.1:{port}"
 
