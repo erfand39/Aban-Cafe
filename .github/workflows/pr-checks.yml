@@ -1,0 +1,37 @@
+name: Pull request checks
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aban-pr-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: TypeScript, unit tests and production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install locked dependencies
+        run: bun install --frozen-lockfile
+
+      - name: TypeScript check
+        run: bun run lint
+
+      - name: Shared logic unit tests
+        run: bun test src/shared
+
+      - name: Build distributable UI
+        run: bun run build
